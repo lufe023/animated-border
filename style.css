@@ -1,0 +1,142 @@
+body{
+    background-color: #303030;
+    padding: 0px;
+    margin: 0px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.box::before{
+    content: '';
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ffad);
+    animation: rotate 4s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position:absolute;
+    width: 500px;
+    height: 500px;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: rotate 4s linear infinite;
+    animation-delay: -2s;
+}
+
+.box span{
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background-color: #000;
+    z-index: 2;
+}
+
+
+form{
+    padding: 20px;
+    text-align: center;
+}
+
+.fa-user-astronaut{
+font-size: 80px;
+filter: drop-shadow(0 0 2px #00ccff);
+}
+
+input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+	outline: none;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.box-button{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+
+.box-button:hover::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    animation: rotate 2s linear infinite;
+    animation-delay: -1s;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+}
+
+.box-button:hover::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    left: 0px;
+    background-image: conic-gradient(transparent, transparent, transparent,#00ffad);
+    animation: rotate 2s linear infinite;
+    animation-delay: 0s;
+}
+
+button{
+    font-size: 13px;
+    font-weight: 600;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    height: 35px;
+    /*background-image: conic-gradient(#00ffad, #00ccff, #00ffad, #00ccff);*/
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 3;
+    background-image: conic-gradient(#00ffad, #00ccff,#00ccff,#00ffad);
+    word-spacing: 0px;
+    transition: word-spacing 0.2s;
+}
+
+button:hover{
+    font-style: italic;
+    word-spacing: 25px;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+a{
+    color:#00ffad;
+}
+
+p{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px;
+    color: white;
+
+}
