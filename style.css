@@ -1,5 +1,13 @@
+:root{
+    --primary-color:#00ccff;
+    --secundary-color: #00ffad;
+    --thirth-color: transparent;
+    --bg-primary-color: #303030;
+    --bg-secundary-color: #000;
+}
+
 body{
-    background-color: #303030;
+    background-color: var(--bg-primary-color);
     padding: 0px;
     margin: 0px;
     display: grid;
@@ -22,7 +30,7 @@ body{
     position:absolute;
     width: 500px;
     height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, #00ffad);
+    background-image: conic-gradient(var(--thirth-color), var(--thirth-color), var(--thirth-color), var(--secundary-color));
     animation: rotate 4s linear infinite;
 }
 
@@ -31,7 +39,7 @@ body{
     position:absolute;
     width: 500px;
     height: 500px;
-    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    background-image: conic-gradient(var(--thirth-color), var(--thirth-color), var(--thirth-color), var(--primary-color));
     animation: rotate 4s linear infinite;
     animation-delay: -2s;
 }
@@ -52,7 +60,8 @@ form{
 
 .fa-user-astronaut{
 font-size: 80px;
-filter: drop-shadow(0 0 2px #00ccff);
+filter: drop-shadow(0 0 2px var(--primary-color));
+margin-top: 30px;
 }
 
 input{
@@ -84,7 +93,7 @@ input{
     left: 0px;
     animation: rotate 2s linear infinite;
     animation-delay: -1s;
-    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    background-image: conic-gradient(var(--thirth-color), var(--thirth-color), var(--thirth-color), var(--primary-color));
 }
 
 .box-button:hover::before{
@@ -93,7 +102,7 @@ input{
     width: 100%;
     height: 40px;
     left: 0px;
-    background-image: conic-gradient(transparent, transparent, transparent,#00ffad);
+    background-image: conic-gradient(var(--thirth-color), var(--thirth-color), var(--thirth-color), var(--secundary-color));
     animation: rotate 2s linear infinite;
     animation-delay: 0s;
 }
@@ -110,7 +119,7 @@ button{
     cursor: pointer;
     border-radius: 5px;
     z-index: 3;
-    background-image: conic-gradient(#00ffad, #00ccff,#00ccff,#00ffad);
+    background-image: conic-gradient(var(--secundary-color), var(--primary-color),var(--primary-color),var(--secundary-color));
     word-spacing: 0px;
     transition: word-spacing 0.2s;
 }
@@ -131,7 +140,8 @@ button:hover{
 }
 
 a{
-    color:#00ffad;
+    color:var(--secundary-color);
+    text-decoration: none;
 }
 
 p{
@@ -139,4 +149,19 @@ p{
     padding: 10px;
     color: white;
 
+}
+
+.socials{
+    word-spacing: 20px;
+}
+
+.social-link{
+    color: white;
+    font-size: 17px;
+    transition: font-size 0.19s;
+}
+
+.social-link:hover{
+    font-size: 25px;
+    filter:drop-shadow(0 0 1px var(--secundary-color));
 }
